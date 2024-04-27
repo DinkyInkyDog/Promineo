@@ -1,0 +1,18 @@
+Each collection type has multiple implementations that one could use. With List, 
+two options are LinkedList and Vector. 
+LinkedList is a data structure that contains a piece of data and the next element in the line, this
+is how it keeps track of all the elements within the list. LinkedLists are unsynchronized, which 
+means that they aren't very stable when multiple threads want to impact the list. Unlike the Vector
+list, which is synchronized. The Vector list works a lot like ArrayLists, making them dynamic when
+it comes to growing or shrinking the list. On the downside it isn't the best bet when working 
+with non-thread environments because of its synchronicity. The Proformance rate will be much 
+slower in these situations. 
+Next is Sets where you can use HashSet, the most commonly used implementation for sets. A HashSet 
+stores unique elements meaning that you can't have any duplicates and it stores them in a random 
+order. It's very easy to add and remove this set type but if you're looking for an ordered set you 
+can use a LinkedHashSet. Because it uses Linked data it keeps the order in which the data was 
+entered. It is slower than a regular HashSet though. 
+Lastly is a Map that takes a few different implementations but two being HashMap and LinkedHashMap. 
+These two have the same similarites as the HashSet and LinkedHashSet where the HashMap doesn't 
+retain the order in which the data was entered and the LinkedHashSet does. Again though, Hash 
+implementations run faster than the Linked. 
