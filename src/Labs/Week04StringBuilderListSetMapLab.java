@@ -6,24 +6,42 @@
 //
 package Labs;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Week04StringBuilderListSetMapLab {
 
 	public static void main(String[] args) {
 
 		// 1. Why would we use a StringBuilder instead of a String?
+//If we want to edit the string than using the String Builder makes that possible.
 		// 		a. Instantiate a new StringBuilder
 		//		b. Append the characters 0 through 9 to it separated by dashes
 		// 				Note:  make sure no dash appears at the end of the StringBuilder
-
+		StringBuilder sentence = new StringBuilder();
+		String character = "character";
+		sentence.append(character);
 		
+		for (int i = 1; i < sentence.length(); i+=2) {
+			
+			sentence.insert(i, '-');
+		}
+		System.out.println(sentence);
 		// 2. List of String:
 		//		a. Create a list of Strings 
 		//		b. Add 5 Strings to it, each with a different length
-
-		
+		List<String> words = new ArrayList<String>();
+		String word1, word2, word3, word4, word5;
+		word1 = "Hey";
+		word2 = " , ";
+		word3 = "what's ";
+		word4 = "up ";
+		word5 = "you?";
 		// 3. Write and test a method that takes a list of strings 
 		//			and returns the shortest string
-
+		
 		
 		// 4. Write and test a method that takes a list of strings 
 		//			and returns the list with the first and last element switched
@@ -55,8 +73,9 @@ public class Week04StringBuilderListSetMapLab {
 
 		
 		// 9. Create a set of strings and add 5 values
-
-		
+		Set<String> setOfString = new HashSet<String>();
+		String w1, w2, w3, w4, w5;
+		w1= "";
 		
 		// 10. Write and test a method that takes a set of strings and a character 
 		//			and returns a set of strings consisting of all the strings in the
