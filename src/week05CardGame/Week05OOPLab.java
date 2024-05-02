@@ -85,11 +85,12 @@ public class Week05OOPLab {
 		//		Add a shuffle method within the Deck Class
 		System.out.println("\nQuestion 3: Deck shuffle() method");
 		// Test your method here
+		firstDeck.shuffle();
 		
 		
 		
 		// Call the describe method on the newly shuffled deck.
-
+		firstDeck.describe();
 		
 		
 		
@@ -97,7 +98,8 @@ public class Week05OOPLab {
 		//		Add a draw method within the Deck Class
 		System.out.println("\nQuestion 4: Deck draw() method");
 		// Test your method here
-		
+		Card pulledCard = firstDeck.drawSingleCard();
+		pulledCard.describe();
 		
 		
 		
@@ -118,8 +120,8 @@ public class Week05OOPLab {
 
 		
 		
-		
-		
+		//Testing out my methods
+		System.out.println("Shuffle");
 		
 		
 		
@@ -130,5 +132,6 @@ public class Week05OOPLab {
 	
 	
 	
+		
 
 }
