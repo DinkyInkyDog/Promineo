@@ -4,7 +4,7 @@
 // Subject:  Object Oriented Programming
 // Java Week 05 Lab  
 //
-package Labs;
+package week05CardGame;
 
 
 
