@@ -1,7 +1,7 @@
 package week05CardGame;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
 import java.util.Random;
 
@@ -65,7 +65,7 @@ public class Deck {
 	
 	public void shuffle() {
 		List<Card> tempDeck = new ArrayList<Card>();
-		//Iterator<Card> it = cards.iterator();
+		
 		for (int i = cards.size(); i > 1; i--) {
 			int activeCard = pickACard(0, i - 1);
 			tempDeck.add(cards.get(activeCard));
