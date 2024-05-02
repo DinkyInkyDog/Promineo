@@ -6,10 +6,8 @@
 //
 package week05CardGame;
 
-
-
-
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class Week05OOPLab {
 
@@ -129,7 +127,10 @@ public class Week05OOPLab {
 	
 	// Method 5:
 	
-	
+	public void Board() {
+		Map<String, Deck> board = new HashMap<String, Deck>();
+		
+	}
 	
 	
 		
