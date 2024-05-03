@@ -43,6 +43,9 @@ public class Card {
 	public void describe() {
 		System.out.println(name + " of " + suit);
 	}
+	public String callCard() {
+		return name + " of " + suit;
+	}
 
 	public int getValue() {
 		return value;

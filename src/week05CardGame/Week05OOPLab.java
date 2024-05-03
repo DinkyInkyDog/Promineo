@@ -115,11 +115,9 @@ public class Week05OOPLab {
 		// 			and deal the cards out to the "players" in the Map.
 		System.out.println("\nQuestion 5: Create Game");
 		// Call your method here
-
 		
+		Board(4);		
 		
-		//Testing out my methods
-		System.out.println("Shuffle");
 		
 		
 		
@@ -127,9 +125,32 @@ public class Week05OOPLab {
 	
 	// Method 5:
 	
-	public void Board() {
-		Map<String, Deck> board = new HashMap<String, Deck>();
+	public static void Board(int numPlayers) {
+		Map<String, Card> board = new HashMap<String, Card>();
+		Deck gameDeck = new Deck();
+		gameDeck.shuffle();
+		for (int i = numPlayers; i > 0; i--) {
+			String player = "Player " + i;
+			Card pulledCard = gameDeck.drawSingleCard();
+			board.put(player, pulledCard);
+			System.out.println(player + " " + pulledCard.callCard());
+		}
 		
+		int winningValue = 0;
+		Card winningCard;
+		String winner = "";
+		System.out.println("Each player picked a card.");
+		for (int i = 1; i <= numPlayers; i++) {
+			String currentPlayer = "Player " + i;
+			System.out.println(currentPlayer + " played " + board.get(currentPlayer).callCard());
+			if (board.get(currentPlayer).getValue() > winningValue) {
+				winningCard = board.get(currentPlayer);
+				winningValue = winningCard.getValue();
+				
+				winner = "Player " + i;
+			}
+		}
+		System.out.println("And the winner is " + winner);
 	}
 	
 	
