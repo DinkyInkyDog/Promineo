@@ -41,7 +41,7 @@ public class Week04StringBuilderListSetMapLab {
 		word5 = "you?";
 		// 3. Write and test a method that takes a list of strings 
 		//			and returns the shortest string
-		
+		System.out.println(shortestString(words));
 		
 		// 4. Write and test a method that takes a list of strings 
 		//			and returns the list with the first and last element switched
@@ -153,7 +153,19 @@ public class Week04StringBuilderListSetMapLab {
 	
 	
 	// Method 3:
-	
+	public static String shortestString(List<String> words) {
+		String shortest = null;
+		for (String string : words) {
+			if(shortest == null) {
+				shortest = string;
+				break;
+			} else if (string.length() < shortest.length()) {
+				shortest = string;
+			}
+		
+		}
+		return shortest;
+	}
 	
 
 }
