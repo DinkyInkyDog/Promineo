@@ -7,6 +7,7 @@
 package Labs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -32,13 +33,14 @@ public class Week04StringBuilderListSetMapLab {
 		// 2. List of String:
 		//		a. Create a list of Strings 
 		//		b. Add 5 Strings to it, each with a different length
-		List<String> words = new ArrayList<String>();
+		
 		String word1, word2, word3, word4, word5;
 		word1 = "Hey";
 		word2 = " , ";
 		word3 = "what's ";
 		word4 = "up ";
 		word5 = "you?";
+		List<String> words = new ArrayList<String>(Arrays.asList(word1, word2, word3, word4, word5));
 		// 3. Write and test a method that takes a list of strings 
 		//			and returns the shortest string
 		System.out.println(shortestString(words));
@@ -155,16 +157,32 @@ public class Week04StringBuilderListSetMapLab {
 	// Method 3:
 	public static String shortestString(List<String> words) {
 		String shortest = null;
+		int shortLength = 0;
+		boolean multipleAnswers = false;
 		for (String string : words) {
 			if(shortest == null) {
 				shortest = string;
-				break;
-			} else if (string.length() < shortest.length()) {
+				
+			} else if (string.replace(" ", "").length() < shortest.length()) {
 				shortest = string;
+			} else if (string.length() == shortest.length()) {
+				multipleAnswers = true;
 			}
 		
 		}
-		return shortest;
+		if (multipleAnswers == true) {
+			shortLength = shortest.length();
+			String allShort = "";
+			for (String string : words) {
+				if (string.length() == shortLength) {
+					allShort += string + " ";
+				}
+			}
+			return allShort;
+		} else {
+			return shortest;
+		}
+		
 	}
 	
 
