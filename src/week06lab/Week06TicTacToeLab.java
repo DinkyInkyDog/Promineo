@@ -100,8 +100,17 @@ public class Week06TicTacToeLab {
 	// START YOUR IMPLEMENTATION BELOW THIS LINE
 
 	public static void main(String[] args) {
-
-			
+		Board board1 = new Board();
+		String  p1 = " X ";
+		String p2 = " O ";
+		String space = "    ";
+		board1.display();
+		System.out.println(space);
+		board1.markBoard(8, p2);
+		board1.markBoard(4, p2);
+		board1.markBoard(0, p2);
+		board1.display();
+		//System.out.println(board1.checkRow(0, 4, 8));
 		
 	}
 	
